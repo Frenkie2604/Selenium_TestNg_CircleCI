@@ -157,7 +157,7 @@ public class WebDriverConfig {
         FirefoxOptions options = new FirefoxOptions();
         //options.addArguments("-private");
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-//        capabilities.setCapability("marionette", true);
+        capabilities.setCapability("marionette", true);
         capabilities.setCapability(FirefoxOptions.FIREFOX_OPTIONS, options);
         driver = new FirefoxDriver(capabilities);
     }
