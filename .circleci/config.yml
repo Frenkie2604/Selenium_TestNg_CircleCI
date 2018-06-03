@@ -15,9 +15,9 @@ jobs:
       - checkout
 
       - run: |
-         sudo apt-get purge firefox
-         wget http://ftp.mozilla.org/pub/firefox/releases/57.0.1/linux-$(uname -m)/en-US/firefox-57.0.1.tar.bz2
-         tar -xjf firefox-57.0.1.tar.bz2
+         sudo apt-get purge -y firefox
+         wget http://ftp.mozilla.org/pub/firefox/releases/55.0.1/linux-$(uname -m)/en-US/firefox-55.0.1.tar.bz2
+         tar -xjf firefox-55.0.1.tar.bz2
          sudo mv /usr/bin/firefox /usr/bin/firefox_old
          sudo ln -s /opt/firefox/firefox /usr/bin/firefox
 
