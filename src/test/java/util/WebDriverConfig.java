@@ -166,11 +166,11 @@ public class WebDriverConfig {
         options.addArguments("enable-automation");
         options.addArguments("disable-infobars");
         options.addArguments("start-maximized");
-        if (os_Name.contains("Win")) {
-            System.setProperty("webdriver.chrome.driver", Chrome_driverPath + "chromedriver.exe");
-        } else {
-            System.setProperty("webdriver.chrome.driver", Chrome_driverPath + "chromedriver");
-        }
+//        if (os_Name.contains("Win")) {
+//            System.setProperty("webdriver.chrome.driver", Chrome_driverPath + "chromedriver.exe");
+//        } else {
+//            System.setProperty("webdriver.chrome.driver", Chrome_driverPath + "chromedriver");
+//        }
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         capabilities.setCapability("marionette", true);
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
