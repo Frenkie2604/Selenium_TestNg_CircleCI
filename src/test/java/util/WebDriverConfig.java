@@ -14,6 +14,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
@@ -142,11 +143,16 @@ public class WebDriverConfig {
 
     private static void firefoxInit() {
         System.out.println("os_Name is equal to: " + os_Name);
-//        if (os_Name.contains("Win")) {
-//            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver.exe");
-//        } else {
-//            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver");
-//        }
+        if (os_Name.contains("Win")) {
+            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver.exe");
+        } else {
+            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver");
+            try {
+                Runtime.getRuntime().exec("chmod +x " + FF_driverPath + "geckodriver");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         System.out.println("the FF driver path is =========> " + FF_driverPath);
         FirefoxOptions options = new FirefoxOptions();
         //options.addArguments("-private");
