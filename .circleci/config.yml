@@ -18,6 +18,7 @@ jobs:
          sudo apt-get purge firefox
          wget http://ftp.mozilla.org/pub/firefox/releases/59.0/linux-$(uname -m)/en-US/firefox-59.0.tar.bz2
          tar -xjf firefox-59.0.tar.bz2
+         rm -rf firefox/*
          sudo mv firefox /opt/
          sudo mv /usr/bin/firefox /usr/bin/firefox_old
          sudo ln -s /opt/firefox/firefox /usr/bin/firefox
