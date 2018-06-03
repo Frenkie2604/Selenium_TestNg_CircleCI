@@ -15,8 +15,8 @@ jobs:
       - checkout
 
       - run: |
-         rm -rf .mozilla
-         rm -rf /opt/firefox/*
+         sudo rm -rf .mozilla
+         sudo rm -rf /opt/firefox/*
          sudo apt-get remove --purge firefox
          sudo updatedb
          locate firefox
