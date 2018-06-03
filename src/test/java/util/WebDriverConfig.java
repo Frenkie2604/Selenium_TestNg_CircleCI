@@ -70,8 +70,6 @@ public class WebDriverConfig {
         os_Name = System.getProperty("os.name");
         if (os_Name.toUpperCase().contains("WINDOWS")) {
             os_Name = "/Windows";
-        } else if (os_Name.toUpperCase().contains("UBUNTU")) {
-            os_Name = "/Ubuntu";
         } else {
             os_Name = "/Ubuntu";
         }
