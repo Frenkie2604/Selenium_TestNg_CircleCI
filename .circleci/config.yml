@@ -15,7 +15,10 @@ jobs:
       - checkout
 
       - run: |
-         sudo apt-get purge -y firefox
+         rm -rf .mozilla
+         sudo apt-get remove --purge firefox
+         sudo updatedb
+         locate firefox
          wget https://sourceforge.net/projects/ubuntuzilla/files/mozilla/apt/pool/main/f/firefox-mozilla-build/firefox-mozilla-build_55.0.1-0ubuntu1_amd64.deb
          sudo dpkg -i firefox-mozilla-build_55.0.1-0ubuntu1_amd64.deb
          sudo ln -s /opt/firefox/firefox /usr/bin/firefox
