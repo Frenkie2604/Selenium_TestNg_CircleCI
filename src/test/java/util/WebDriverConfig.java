@@ -142,11 +142,11 @@ public class WebDriverConfig {
 
     private static void firefoxInit() {
         System.out.println("os_Name is equal to: " + os_Name);
-        if (os_Name.contains("Win")) {
-            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver.exe");
-        } else {
-            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver");
-        }
+//        if (os_Name.contains("Win")) {
+//            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver.exe");
+//        } else {
+//            System.setProperty("webdriver.gecko.driver", FF_driverPath + "geckodriver");
+//        }
         System.out.println("the FF driver path is =========> " + FF_driverPath);
         FirefoxOptions options = new FirefoxOptions();
         //options.addArguments("-private");
