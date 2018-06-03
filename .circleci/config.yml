@@ -14,9 +14,6 @@ jobs:
     steps:
       - checkout
 
-      - run: |
-         docker run -d --name=grid -p 4444:24444 -p 5900:25900 --shm-size="512mb" elgalu/selenium
-
       # Download and cache dependencies
       - restore_cache:
           keys:
