@@ -8,7 +8,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk
-      - image: selenium/standalone-chrome:3.12
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -32,6 +31,16 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
+
+      - run: docker run -d
+             --name=grid
+             -p 4444:24444
+             -p 5900:25900
+             -e SCREEN_WIDTH=1920
+             -e SCREEN_HEIGHT=1480
+             -e TZ="Europe/Warsaw"
+             --shm-size="512mb"
+             elgalu/selenium
 
       - save_cache:
           paths:
