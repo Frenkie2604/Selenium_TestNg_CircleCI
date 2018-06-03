@@ -5,6 +5,12 @@
 version: 2
 jobs:
   build:
+    dependencies:
+      pre:
+        - pip install mozdownload mozinstall
+        - mozdownload --version latest --destination firefox.tar.bz2
+        - mozinstall firefox.tar.bz2
+
     machine: true
 
     environment:
