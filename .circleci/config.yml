@@ -20,8 +20,8 @@ jobs:
          sudo apt-get remove --purge firefox
          sudo updatedb
          locate firefox
-         wget https://sourceforge.net/projects/ubuntuzilla/files/mozilla/apt/pool/main/f/firefox-mozilla-build/firefox-mozilla-build_55.0.1-0ubuntu1_amd64.deb
-         sudo dpkg -i firefox-mozilla-build_55.0.1-0ubuntu1_amd64.deb
+         wget https://sourceforge.net/projects/ubuntuzilla/files/mozilla/apt/pool/main/f/firefox-mozilla-build/firefox-mozilla-build_57.0-0ubuntu1_amd64.deb
+         sudo dpkg -i firefox-mozilla-build_57.0-0ubuntu1_amd64.deb
          sudo unlink /usr/bin/firefox
          sudo ln -s /opt/firefox/firefox /usr/bin/firefox
 
